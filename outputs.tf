@@ -13,7 +13,7 @@ output "public_subnet_ids" {
   value       = module.vpc.public_subnets
 }
 
-output "private_subnet_ids" {
-  description = "Private subnet IDs"
-  value       = module.vpc.private_subnets
+output "aws_region" {
+  description = "AWS region"
+  value       = data.aws_region.current.name
 }
